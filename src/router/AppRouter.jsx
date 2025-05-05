@@ -5,6 +5,7 @@ import {HomePage, DashboardPage, LoginPage, RegisterPage} from '../pages'
 export const AppRouter = () => {
   return (
     <>
+    //se agregan las rutas
         <Routes>
             <Route path='/' element={<Navbar/>}>
                 <Route index element={<HomePage/>}/>
