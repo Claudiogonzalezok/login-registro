@@ -27,7 +27,7 @@ export const LoginPage = () => {
 
   return (
     <div className="wrapper">
-      <form>
+      <form onSubmit={onLogin}>
         <h1>Iniciar Sesion</h1>
         <div className="input-group">
           <input 

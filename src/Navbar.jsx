@@ -1,7 +1,15 @@
 import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, useLocation, useNavigate, replace } from 'react-router-dom'
 
 export const Navbar = () => {
+  const { state } = useLocation();
+  const navigate = useNavigate();
+  const onLogout = () =>{
+    navigate('/login' , {
+      replace: true,
+    })
+  }
+
   return (
     <>
         <header>
@@ -9,14 +17,24 @@ export const Navbar = () => {
             <Link to='/'>Logo</Link>
           </h1>
 
-          <nav>
-            <Link to='/Login'>Iniciar Sesión</Link>
-            <Link to='/Register'>Registarse</Link>
-          </nav>
-          <div className="user">
-            <span className="username">Roberto</span>
-            <button className='btn-logout'>Cerrar Sesiòn</button>
-          </div>
+          {
+            state?.logged?
+            (
+
+              <div className="user">
+                <span className="username">{state?.name}</span>
+                <button className='btn-logout' onClick={onLogout}>Cerrar Sesion</button>
+              </div>
+
+            ) : 
+            (
+
+              <nav>
+                <Link to='/login'>Iniciar Sesión</Link>
+                <Link to='/register'>Registarse</Link>
+              </nav>
+            )
+          }
         </header>
 
         <Outlet/>
