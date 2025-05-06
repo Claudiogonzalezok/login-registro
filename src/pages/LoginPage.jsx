@@ -10,7 +10,7 @@ export const LoginPage = () => {
   useForm({
     name: '',
     email: '',
-    password: ','
+    password: '',
   });
 
   const onLogin = (e) => {
