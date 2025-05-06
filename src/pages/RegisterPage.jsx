@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export const RegisterPage = () => {
 
  const navigate = useNavigate();
+ const mensaje = () => alert("Su usuario fue creado con exito!!, Lo redirijimos al login");
 
   const {name, email, password, onInputChange, onResetForm} = 
   useForm({
@@ -16,9 +17,9 @@ export const RegisterPage = () => {
   const onRegister = (e) => {
     e.preventDefault()
     navigate('/login' , {
-      replace: true,
+      replace: false,
       state: {
-        logged: true,
+        logged: false,
         name
       }
     });
@@ -68,7 +69,7 @@ export const RegisterPage = () => {
           <label htmlFor="password">Contraseña:</label>
         </div>
 
-        <button>Registrarse</button>
+        <button onClick = {mensaje} >Registrarse</button>
 
       </form>
     </div>

@@ -28,7 +28,7 @@ export const LoginPage = () => {
   return (
     <div className="wrapper">
       <form onSubmit={onLogin}>
-        <h1>Iniciar Sesión</h1>
+        <h1>Aula Virtual</h1>
         <div className="input-group">
           <input 
             type="text"
@@ -68,7 +68,7 @@ export const LoginPage = () => {
           <label htmlFor="password">Contraseña:</label>
         </div>
 
-        <button>Entrar</button>
+        <button>Iniciar Sesión</button>
         <Link to='/register'>Si no tienes una cuenta. Registrate</Link>
       </form>
     </div>
