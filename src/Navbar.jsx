@@ -23,7 +23,7 @@ export const Navbar = () => {
 
               <div className="user">
                 <span className="username">{state?.name}</span>
-                <button className='btn-logout' onClick={onLogout}>Cerrar Sesion</button>
+                <button className='btn-logout' onClick={onLogout}>Cerrar Sesión</button>
               </div>
 
             ) : 

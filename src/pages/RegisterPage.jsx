@@ -10,7 +10,7 @@ export const RegisterPage = () => {
   useForm({
     name: '',
     email: '',
-    password: ','
+    password: '',
   });
 
   const onRegister = (e) => {

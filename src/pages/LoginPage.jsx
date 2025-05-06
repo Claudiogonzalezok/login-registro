@@ -1,6 +1,6 @@
 import React from 'react';
 import {useForm} from '../hook/useForm'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export const LoginPage = () => {
 
@@ -28,7 +28,7 @@ export const LoginPage = () => {
   return (
     <div className="wrapper">
       <form onSubmit={onLogin}>
-        <h1>Iniciar Sesion</h1>
+        <h1>Iniciar Sesión</h1>
         <div className="input-group">
           <input 
             type="text"
@@ -69,7 +69,7 @@ export const LoginPage = () => {
         </div>
 
         <button>Entrar</button>
-
+        <Link to='/register'>Si no tienes una cuenta. Registrate</Link>
       </form>
     </div>
   )
